@@ -9,7 +9,7 @@ Everything you upload is in this repo:
 | Small promo tile (required, 440×280) | `store/small-promo-tile-440x280.png` |
 | Marquee promo tile (optional, 1400×560) | `store/marquee-promo-tile-1400x560.png` |
 | Screenshots (1280×800, upload in this order) | `store/screenshot-1-tab-path.png` … `store/screenshot-5-clean.png` |
-| Privacy policy | `https://ashokyadav.github.io/tab-order-visualizer/privacy` (live once GitHub Pages is on) |
+| Privacy policy | `https://ashokyadav.github.io/Tab-order-visualizer/privacy` (live once GitHub Pages is on) |
 
 ## Steps
 
@@ -83,4 +83,4 @@ Show the keyboard focus order of the current page and highlight focus-related ac
 
 **Certifications:** tick all three (no selling of data, no use unrelated to the single purpose, no use for creditworthiness or lending).
 
-**Privacy policy URL:** `https://ashokyadav.github.io/tab-order-visualizer/privacy`
+**Privacy policy URL:** `https://ashokyadav.github.io/Tab-order-visualizer/privacy`

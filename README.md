@@ -8,7 +8,7 @@ See the keyboard path through any web page. Every element you can reach with <kb
 
 Automated scanners are good at finding missing labels. They are bad at telling you whether a person can actually get through the page with a keyboard. This tool doesn't try to answer that for you. It puts the path where you can see it, so you can judge it in seconds.
 
-**Try it now:** [install the bookmarklet](https://ashokyadav.github.io/tab-order-visualizer/), then open the [broken demo store](https://ashokyadav.github.io/tab-order-visualizer/demo/broken-store.html) and the [fixed one](https://ashokyadav.github.io/tab-order-visualizer/demo/fixed-store.html). A 50-second demo video is attached to the [latest release](https://github.com/ashokyadav/tab-order-visualizer/releases/latest).
+**Try it now:** [install the bookmarklet](https://ashokyadav.github.io/Tab-order-visualizer/), then open the [broken demo store](https://ashokyadav.github.io/Tab-order-visualizer/demo/broken-store.html) and the [fixed one](https://ashokyadav.github.io/Tab-order-visualizer/demo/fixed-store.html). A 50-second demo video is attached to the [latest release](https://github.com/ashokyadav/tab-order-visualizer/releases/latest).
 
 ## What it flags
 
@@ -26,7 +26,7 @@ Skip links that stay off-screen until focused are recognised as correct and aren
 
 ## Install
 
-**Bookmarklet (any Chromium browser, no install):** open the [install page](https://ashokyadav.github.io/tab-order-visualizer/) (or `dist/install.html` locally) and drag the button onto your bookmarks bar. Click it on any page to open, and click again to close.
+**Bookmarklet (any Chromium browser, no install):** open the [install page](https://ashokyadav.github.io/Tab-order-visualizer/) (or `dist/install.html` locally) and drag the button onto your bookmarks bar. Click it on any page to open, and click again to close.
 
 **Chrome extension:** download `tab-order-visualizer-extension.zip` from the [latest release](https://github.com/ashokyadav/tab-order-visualizer/releases/latest) and unzip it, or use the `extension` folder from this repo.
 
