@@ -43,7 +43,7 @@ writeFileSync('dist/install.html', install);
 mkdirSync('docs/demo', { recursive: true });
 writeFileSync('docs/index.html', install.replace('</body>',
   '<h2>Try it</h2><p><a href="demo/broken-store.html">Broken demo store</a> · <a href="demo/fixed-store.html">Fixed demo store</a> · ' +
-  '<a href="https://github.com/YOUR-USERNAME/tab-order-visualizer">Source on GitHub</a></p></body>'));
+  '<a href="https://github.com/ashokyadav/tab-order-visualizer">Source on GitHub</a></p></body>'));
 copyFileSync('demo/broken-store.html', 'docs/demo/broken-store.html');
 copyFileSync('demo/fixed-store.html', 'docs/demo/fixed-store.html');
 
