@@ -1,0 +1,32 @@
+{
+  "name": "tab-order-visualizer",
+  "version": "1.0.0",
+  "description": "Draws the keyboard tab order on any page and flags focus-order, focus-visibility and keyboard-reachability problems.",
+  "license": "MIT",
+  "author": "Ashok Kumar Yadav",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node tests/run.mjs",
+    "record": "node video/record.mjs",
+    "mix": "python3 video/mix.py"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.0",
+    "terser": "^5.31.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR-USERNAME/tab-order-visualizer.git"
+  },
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "wcag",
+    "keyboard",
+    "focus",
+    "tab-order",
+    "bookmarklet",
+    "chrome-extension"
+  ]
+}

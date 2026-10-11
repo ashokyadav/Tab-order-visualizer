@@ -1,0 +1,91 @@
+1
+00:00:00,400 --> 00:00:03,442
+Can you get through this page with only a
+keyboard?
+
+2
+00:00:03,442 --> 00:00:05,996
+Most people can't see the path focus
+takes.
+
+3
+00:00:05,996 --> 00:00:07,031
+So let's draw it.
+
+4
+00:00:08,411 --> 00:00:11,114
+This is a demo store, broken on purpose.
+
+5
+00:00:11,114 --> 00:00:16,250
+Every number is a stop on the keyboard
+path, and every line shows where focus
+
+6
+00:00:16,250 --> 00:00:16,926
+goes next.
+
+7
+00:00:18,154 --> 00:00:18,531
+Watch.
+
+8
+00:00:18,531 --> 00:00:21,858
+Focus jumps to the footer first, then back
+to the top.
+
+9
+00:00:21,858 --> 00:00:26,818
+It vanishes into a closed menu you can't
+see, and lands on buttons with no focus
+
+10
+00:00:26,818 --> 00:00:27,760
+outline at all.
+
+11
+00:00:32,667 --> 00:00:35,066
+Click any finding to jump straight to it.
+
+12
+00:00:35,066 --> 00:00:38,519
+Each one maps to WCAG, and you can
+download the full report.
+
+13
+00:00:39,545 --> 00:00:41,467
+Now, the same page, fixed.
+
+14
+00:00:43,695 --> 00:00:44,560
+Zero errors.
+
+15
+00:00:44,560 --> 00:00:48,744
+Focus follows the reading order, and every
+stop is visible.
+
+16
+00:00:53,847 --> 00:00:54,718
+Three lessons.
+
+17
+00:00:54,718 --> 00:00:56,336
+Tab order follows the DOM.
+
+18
+00:00:56,336 --> 00:00:58,888
+If it can take focus, it must be visible.
+
+19
+00:00:58,888 --> 00:01:02,373
+And never remove the focus outline without
+a replacement.
+
+20
+00:01:02,373 --> 00:01:03,991
+It's free and open source.
+
+21
+00:01:03,991 --> 00:01:05,734
+The link is in the comments.

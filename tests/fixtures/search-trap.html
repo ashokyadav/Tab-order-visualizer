@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Search flyout with focus trap</title>
+<style>
+  body { font: 16px system-ui; margin: 0; }
+  header { display: flex; gap: 16px; padding: 16px; align-items: center; border-bottom: 1px solid #ccc; }
+  .flyout { display: none; position: fixed; inset: 64px 0 auto 0; background: #fff; padding: 24px; box-shadow: 0 8px 24px #0003; }
+  .flyout.open { display: block; }
+  a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid #c00; }
+</style></head><body>
+<header>
+  <a href="#">Shop</a><a href="#">Sale</a>
+  <input id="q" type="search" aria-label="Search" placeholder="Search">
+  <button>Bag</button>
+</header>
+<div class="flyout" id="fly"><a href="#">Suggested: Rain jacket</a> <a href="#">Suggested: Day pack</a>
+  <button id="closeSearch">Close search</button></div>
+<main style="padding:16px"><a href="#">Shop new</a> <button>Sign in</button></main>
+<script>
+  // Typical pattern: focusing search opens a panel and traps focus in header search + panel
+  const q = document.getElementById('q'), fly = document.getElementById('fly');
+  q.addEventListener('focus', () => fly.classList.add('open'));
+  document.getElementById('closeSearch').addEventListener('click', () => { fly.classList.remove('open'); q.blur(); });
+  document.addEventListener('focusin', (e) => {
+    if (fly.classList.contains('open') && e.target !== q && !fly.contains(e.target)) q.focus();
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && fly.classList.contains('open')) { fly.classList.remove('open'); q.blur(); } });
+</script></body></html>

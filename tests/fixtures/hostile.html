@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Hostile &lt;img src=x onerror=alert(1)&gt; page</title></head>
+<body>
+  <!-- Page text designed to break out of the panel or the report if it isn't escaped -->
+  <button aria-label='<img src=x onerror="window.__pwned=1">'>one</button>
+  <a href="#" id='x"><script>window.__pwned=2</script>'>two</a>
+  <div onclick="1" class='"><svg onload=window.__pwned=3>' style="cursor:pointer;width:80px;height:30px">=HYPERLINK("http://evil.example","click")</div>
+  <a href="#" style="outline:none" onfocus="this.style.outline='none'">=1+1</a>
+</body></html>

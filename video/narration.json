@@ -1,0 +1,9 @@
+[
+  { "id": "intro", "text": "Can you get through this page with only a keyboard? Most people can't see the path focus takes. So let's draw it." },
+  { "id": "broken_open", "text": "This is a demo store, broken on purpose. Every number is a stop on the keyboard path, and every line shows where focus goes next." },
+  { "id": "broken_play", "text": "Watch. Focus jumps to the footer first, then back to the top. It vanishes into a closed menu you can't see, and lands on buttons with no focus outline at all." },
+  { "id": "findings", "text": "Click any finding to jump straight to it. Each one maps to WCAG, and you can download the full report." },
+  { "id": "fixed_card", "text": "Now, the same page, fixed." },
+  { "id": "fixed", "text": "Zero errors. Focus follows the reading order, and every stop is visible." },
+  { "id": "end", "text": "Three lessons. Tab order follows the DOM. If it can take focus, it must be visible. And never remove the focus outline without a replacement. It's free and open source. The link is in the comments." }
+]

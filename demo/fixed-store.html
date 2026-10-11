@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo Outfitters (fixed)</title>
+<style>
+  body { margin: 0; font: 16px/1.5 Georgia, serif; color: #1f2a1c; background: #f6f7f2; }
+  a { color: #1f5d3a; }
+  /* FIX: one clear focus style for every keyboard stop */
+  :focus-visible { outline: 3px solid #f2b705; outline-offset: 2px; }
+  .skip { position: absolute; left: -9999px; top: 8px; background: #1f5d3a; color: #fff; padding: 8px 12px; }
+  .skip:focus { left: 8px; outline: 3px solid #f2b705; }        /* correct pattern: visible on focus */
+  header { display: flex; align-items: center; gap: 24px; padding: 16px 32px; background: #fff; border-bottom: 1px solid #d6dccd; }
+  header nav { display: flex; gap: 18px; }
+  .logo { font-weight: 700; font-size: 20px; margin-right: auto; }
+  .drawer { position: fixed; top: 0; right: 0; width: 280px; height: 100vh; background: #fff; transform: translateX(100%); padding: 24px; }
+  .hero { display: flex; flex-direction: column; padding: 40px 32px; }
+  .hero .cta-row { display: flex; gap: 12px; }
+  .btn { font: inherit; padding: 10px 18px; border-radius: 6px; border: 2px solid #1f5d3a; background: #1f5d3a; color: #fff; cursor: pointer; }
+  .btn.ghost { background: transparent; color: #1f5d3a; }
+  .btn.good:focus-visible { outline: 3px solid #f2b705; outline-offset: 2px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 0 32px 40px; }
+  .card { background: #fff; border: 1px solid #d6dccd; border-radius: 8px; padding: 16px; }
+  .fake-btn { display: inline-block; margin-top: 8px; padding: 8px 14px; background: #f2b705; border: 0; border-radius: 6px; cursor: pointer; font: inherit; color: #1f2a1c; }
+  .fake-btn:focus-visible { outline-color: #1f5d3a; }
+  .carousel { overflow: hidden; width: 600px; margin: 0 32px 40px; border: 1px solid #d6dccd; }
+  .track { display: flex; width: 1800px; transition: transform .3s; }
+  .carousel-nav { margin: -28px 32px 40px; display: flex; gap: 8px; }
+  @media (prefers-reduced-motion: reduce) { .track { transition: none; } }
+  .slide { width: 600px; padding: 24px; background: #e7eedf; }
+  .sr-only-oops { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .ghost-link { opacity: 0; }
+  footer { padding: 32px; background: #1f2a1c; color: #e8ecdf; }
+  footer a { color: #cfe8c2; }
+  .tabs [role=tab] { font: inherit; padding: 6px 12px; border: 1px solid #1f5d3a; background: #fff; }
+  .tabs [role=tab][aria-selected=true] { background: #1f5d3a; color: #fff; }
+</style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <span class="logo">Demo Outfitters</span>
+    <nav aria-label="Main">
+      <a href="#">Tents</a>
+      <a href="#">Packs</a>
+      <a href="#">Sale</a>
+      <a href="#">Journal</a>
+    </nav>
+    <button class="btn ghost" aria-label="Open cart">Cart (2)</button>
+  </header>
+
+  <!-- FIX: a closed drawer is hidden, so its links leave the tab order -->
+  <aside class="drawer" aria-label="Menu" hidden>
+    <a href="#">Account</a><br><a href="#">Orders</a><br><a href="#">Sign out</a>
+  </aside>
+
+  <main id="main">
+    <section class="hero">
+      <h1>Gear for wet weekends</h1>
+      <div class="cta-row">
+        <a class="btn first" href="#">Shop rain shells</a>
+        <a class="btn ghost" href="#">See the lookbook</a>
+        <button class="btn good">Correct focus style</button>
+      </div>
+    </section>
+
+    <div class="grid">
+      <div class="card"><h2>Ridge 2P tent</h2><p>Two-person, 1.6 kg.</p>
+        <button class="fake-btn">Add to bag</button></div>
+      <div class="card"><h2>Tarn 40 pack</h2><p>Roll-top, 40 L.</p>
+        <button class="fake-btn">Add to bag</button></div>
+      <div class="card"><h2>Moss fleece</h2><p>Recycled, mid-weight.</p>
+        <button class="fake-btn">Notify me</button></div>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Size guide" style="margin:0 32px 24px">
+      <button role="tab" aria-selected="true" tabindex="0">Men</button>
+      <button role="tab" aria-selected="false" tabindex="-1">Women</button>
+      <button role="tab" aria-selected="false" tabindex="-1">Kids</button>
+    </div>
+
+    <div class="carousel" aria-label="Featured">
+      <div class="track">
+        <div class="slide"><a href="#">Slide 1: Autumn layers</a></div>
+        <div class="slide" inert><a href="#">Slide 2: Trail runners</a></div>
+        <div class="slide" inert><a href="#">Slide 3: Bivvy bags</a></div>
+      </div>
+    </div>
+
+    <div class="carousel-nav">
+      <button class="btn ghost" data-dir="-1">Previous slide</button>
+      <button class="btn ghost" data-dir="1">Next slide</button>
+    </div>
+
+    <p style="margin:0 32px 24px">
+      <a href="#"><span aria-hidden="true">★</span> Reviews</a>
+    </p>
+
+    <fern-newsletter></fern-newsletter>
+  </main>
+
+  <footer>
+    <p style="margin:0 0 12px;font-size:14px;opacity:.85">Demo Outfitters is a fictional store made for testing. It is not a real business.</p>
+    <a href="#">Help</a> · <a href="#">Returns</a> · <a href="#">Contact</a>
+    <p><a href="#">Back to top</a></p>
+  </footer>
+
+  <script>
+    // FIX: only the visible slide is focusable
+    let slide = 0;
+    const slides = [...document.querySelectorAll('.slide')];
+    document.querySelectorAll('.carousel-nav button').forEach((b) => b.addEventListener('click', () => {
+      slide = (slide + Number(b.dataset.dir) + slides.length) % slides.length;
+      document.querySelector('.track').style.transform = `translateX(${-600 * slide}px)`;
+      slides.forEach((s, i) => { s.inert = i !== slide; });
+    }));
+    customElements.define('fern-newsletter', class extends HTMLElement {
+      constructor() {
+        super();
+        this.attachShadow({ mode: 'open' }).innerHTML = `
+          <style>input,button{font:inherit;padding:8px} button:focus-visible,input:focus-visible{outline:3px solid #f2b705}</style>
+          <form style="margin:0 32px 40px"><label>Email <input type="email"></label> <button>Subscribe</button></form>`;
+      }
+    });
+  </script>
+</body>
+</html>

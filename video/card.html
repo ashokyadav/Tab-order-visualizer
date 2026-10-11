@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>card</title>
+<style>
+  html, body { margin: 0; height: 100%; }
+  body { display: grid; place-items: center; background: #2547d0; color: #fff; font-family: "Inter", "Helvetica Neue", Arial, sans-serif; }
+  .wrap { width: 1040px; }
+  h1 { font-size: 64px; line-height: 1.08; margin: 0 0 22px; font-weight: 800; letter-spacing: -1px; }
+  p { font-size: 28px; line-height: 1.4; margin: 0; color: #dfe5ff; }
+  ol { margin: 0; padding: 0; list-style: none; counter-reset: l; }
+  li { counter-increment: l; display: grid; grid-template-columns: 64px 1fr; gap: 18px; margin: 0 0 26px; font-size: 27px; line-height: 1.35; }
+  li::before { content: counter(l); width: 48px; height: 48px; border-radius: 50%; background: #fff; color: #2547d0; font-weight: 800; display: grid; place-items: center; font-size: 24px; }
+  li b { display: block; margin-bottom: 4px; font-size: 31px; color: #fff; }
+  li span { color: #dfe5ff; }
+  .path { position: absolute; left: 0; right: 0; top: 40px; text-align: center; font-size: 22px; color: #dfe5ff; }
+  .dot { display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: #e2008a; margin-right: 10px; }
+</style></head><body><div class="wrap" id="c"></div>
+<script>
+  const q = new URLSearchParams(location.search);
+  const c = document.getElementById('c');
+  if (q.get('v') === 'end') {
+    c.innerHTML = `<h1 style="font-size:46px;margin-bottom:34px">Three keyboard lessons</h1><ol>
+      <li><div><b>Tab order follows the DOM</b><span>CSS order and tabindex above 0 move what people see, not where focus goes.</span></div></li>
+      <li><div><b>If it can take focus, it must be visible</b><span>Hide closed menus and off-screen slides with hidden or inert, not a transform.</span></div></li>
+      <li><div><b>Never remove the focus outline without a replacement</b><span>Style :focus-visible, and use a real button for anything clickable.</span></div></li></ol>`;
+    document.body.insertAdjacentHTML('beforeend', '<div class="path"><span class="dot"></span>Tab Order Visualizer · free and open source · link in the comments</div>');
+  } else {
+    c.innerHTML = `<h1>${q.get('t')}</h1><p>${q.get('s') || ''}</p>`;
+  }
+</script></body></html>
