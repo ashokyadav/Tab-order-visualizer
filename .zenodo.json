@@ -3,7 +3,7 @@
   "upload_type": "software",
   "description": "<p>A browser tool that visualizes the keyboard tab order of any web page and flags focus-related accessibility problems: focus order jumps (WCAG 2.4.3), focusable elements that are not visible (WCAG 2.4.7), clickable elements that cannot be reached with the keyboard (WCAG 2.1.1) and missing focus indicators (WCAG 2.4.7).</p><p>It computes sequential focus navigation order following the HTML specification, including shadow DOM, slots, radio groups and positive tabindex, and exports findings as HTML, CSV or Markdown reports. Available as a bookmarklet and a Chrome extension. It collects no user data.</p>",
   "creators": [
-    { "name": "Yadav, Ashok Kumar" }
+    { "name": "Yadav, Ashok Kumar", "orcid": "0009-0007-2134-3458" }
   ],
   "license": "mit",
   "keywords": ["accessibility", "web accessibility", "WCAG", "keyboard navigation", "focus order", "tab order", "accessibility testing", "browser extension"],

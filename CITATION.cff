@@ -13,9 +13,10 @@ type: software
 authors:
   - family-names: "Yadav"
     given-names: "Ashok Kumar"
-    # orcid: "https://orcid.org/0000-0000-0000-0000"   # add your ORCID iD here
+    orcid: "https://orcid.org/0009-0007-2134-3458"
 version: "1.0.0"
-date-released: "2026-10-10"
+date-released: "2026-10-15"
+doi: "10.5281/zenodo.23381647"
 license: MIT
 repository-code: "https://github.com/ashokyadav/Tab-order-visualizer"
 url: "https://ashokyadav.github.io/Tab-order-visualizer/"

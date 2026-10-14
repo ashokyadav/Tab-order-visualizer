@@ -1,5 +1,6 @@
 # Tab Order Visualizer
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23381647.svg)](https://doi.org/10.5281/zenodo.23381647)
 [![CI](https://github.com/ashokyadav/tab-order-visualizer/actions/workflows/ci.yml/badge.svg)](https://github.com/ashokyadav/tab-order-visualizer/actions/workflows/ci.yml)
 
 See the keyboard path through any web page. Every element you can reach with <kbd>Tab</kbd> gets a numbered marker. Lines show where focus goes next, and the stops that break the path are flagged.
